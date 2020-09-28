@@ -13,6 +13,7 @@ import matplotlib.pyplot as plt
 import missingno as msno
 import seaborn as sns
 
+
 cwd = os.getcwd()
 
 datadir = f"{cwd}/data"
@@ -32,8 +33,7 @@ train.info()
 
 # separate categorical and numerical
 train_cat = train.columns[train.dtypes == 'object']
-# train_num = train.columns[train.dtypes != 'object'].drop(['id'], axis=1).fillna(0)
-# train_numeric = train.select_dtypes(['number']).drop(['id'], axis=1).fillna(0)
+train_numeric = train.select_dtypes(['number']).drop(['id'], axis=1).fillna(0)
 train_num = train.columns[train.dtypes != 'object']
 # print("\nNumeric variables ", len(train_numeric))
 print("\nNum variables ", len(train_num))
@@ -41,6 +41,11 @@ print("\nCat variables ", len(train_cat))
 
 # get some plots
 sns.displot(train.revenue)
+plt.savefig("img/revenue.png")
+plt.close()
+sns.pairplot(train_numeric)
+plt.savefig("img/pairplot.png")
+plt.close()
 
 #msno.matrix(train.sample(500))
 #plt.savefig(f"{imgdir}/missing_box_office_data1.png", bbox_inches='tight')
