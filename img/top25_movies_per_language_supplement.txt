@@ -1,0 +1,17 @@
+04: Pусский : Russian
+06: 日本語 : Nihongo
+07: 普通话  : Mandarin
+08: हिन्दी  : Hindi
+10: العربية : Arabic
+11: 한국어/조선말 : Korean, Korean language
+12: 广州话 / 廣州話 : Cantonese
+13: தமிழ் : Tamil
+17: ภาษาไทย : Thai language
+18: svenska : Swedish
+19: Český : Czech
+20: עִבְרִית : Hebrew
+21: ελληνικά : Greek
+22: Türkçe : Turkish
+23: Dansk : Danish
+24: Tiếng Việt : Vietnamese
+25: فارسی : Farsi
